@@ -17,7 +17,7 @@ def solve_xor():
     ]
 
     # Random seed
-    random.seed(30)
+    random.seed(0)
 
     # Initialize weights and biases
     w_1 = random.uniform(-1, 1)  # Input to hidden neuron 1
