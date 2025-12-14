@@ -1,9 +1,18 @@
+# Name: solve_xor.py
+# Description: Train a neural network to solve XOR problem
+# Author: MEC255017 - luqmannaim@graduate.utm.my
+
 import math
 import random
+from datetime import datetime
 
 def sigmoid(x):
     """Sigmoid activation function"""
     return 1 / (1 + math.exp(-x))
+
+def timestamp():
+    """Print current timestamp"""
+    print(f"\nTimestamp: {datetime.now()}")
 
 def solve_xor():
     """Train neural network to solve XOR problem"""
@@ -40,6 +49,8 @@ def solve_xor():
     ############
     # TRAINING #
     ############
+
+    print("\n------ TRAINING ------\n")
 
     for epoch in range(1, max_epochs + 1):
 
@@ -110,6 +121,7 @@ def solve_xor():
     # TESTING #
     ###########
 
+    print("\n------ TESTING ------")
     print("\nTesting trained network on XOR inputs...")
 
     for x_1, x_2, target in t_data:
@@ -135,6 +147,9 @@ def solve_xor():
 
         # Print results
         print(f"\nInput: ({x_1}, {x_2})\nTarget: {target}\nOutput: {o_output:.6f}\nPredicted Class: {predicted_class}")
+    
+    print("\n------ END ------\n")
 
 if __name__ == "__main__":
+    timestamp()
     solve_xor()
