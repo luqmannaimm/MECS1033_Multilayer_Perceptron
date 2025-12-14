@@ -130,7 +130,7 @@ def solve_xor():
         o_input = (w_5 * h1_output) + (w_6 * h2_output) + b_3
         o_output = sigmoid(o_input)
 
-        # Determine predicted class
+        # Determine predicted class (True if output >= 0.5)
         predicted_class = 1 if o_output >= 0.5 else 0
 
         # Print results
